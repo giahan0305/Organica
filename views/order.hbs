@@ -1,0 +1,69 @@
+`<div class="container mt-5">
+  <form class="form-delivery">
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="inputName" class="form-label">Tên</label>
+        <input
+          required
+          type="text"
+          class="form-control"
+          id="inputName"
+          placeholder="Nhập tên"
+        />
+      </div>
+      <div class="col-md-6">
+        <label for="inputPhone" class="form-label">Số điện thoại</label>
+        <input
+          required
+          type="number"
+          class="form-control"
+          id="inputPhone"
+          placeholder="Nhập số điện thoại"
+        />
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="inputAddress" class="form-label">Địa chỉ</label>
+      <input
+        required
+        type="text"
+        class="form-control"
+        id="inputAddress"
+        placeholder="Nhập địa chỉ"
+      />
+    </div>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="inputWard" class="form-label">Quận</label>
+        <select id="inputWard" class="form-select custom-select" required>
+          <option selected>Chọn</option>
+          <option>Quận 1</option>
+          <option>Quận 3</option>
+          <option>Quận 4</option>
+          <option>Quận 5</option>
+          <option>Quận 6</option>
+          <option>Quận 7</option>
+          <option>Quận 8</option>
+          <option>Quận 10</option>
+          <option>Quận 11</option>
+          <option>Quận 12</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">Thành phố</label>
+        <select id="inputCity" class="form-select custom-select" required>
+          <option selected>Chọn</option>
+          <option>Thành phố Hồ Chí Minh</option>
+        </select>
+      </div>
+
+    </div>
+    <div id="order-items" class="mb-4">
+    </div>
+    <button
+      type="submit"
+      class="btn btn-primary w-100"
+      style="background-color: #05c26a; border-color: #05c26a;"
+    >Submit</button>
+  </form>
+</div>

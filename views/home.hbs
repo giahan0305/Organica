@@ -1,0 +1,196 @@
+<!-- BODY -->
+<main>
+  <article>
+    <!-- HERO-->
+    <section class="hero">
+      <div class="container">
+        <div class="her-content">
+          <p class="hero-subtitle">Giảm giá 25% cho tất cả sản phẩm.</p>
+          <h2 class="h1 hero-title">
+            Chứng nhận
+            <span class="span">thực phẩm</span>
+            <span class="span">hữu cơ</span>
+          </h2>
+          <p class="hero-text">
+            RAU HỮU CƠ CHẤT LƯỢNG CAO
+          </p>
+          <a href="./shop.html" class="btncreate btn-primary">
+            <span class="span">Mua Ngay</span>
+            <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+          </a>
+        </div>
+        <figure class="hero-banner">
+          <img
+            src="/img/hero-banner.png"
+            width="603"
+            height="634"
+            loading="lazy"
+            alt="Vegetables"
+            class="w-100"
+          />
+        </figure>
+      </div>
+    </section>
+    <!-- END HERO -->
+  </article>
+</main>
+<!-- END BODY -->
+
+<!-- SERVICE -->
+<section class="section service">
+  <div class="container">
+    <ul class="service-list">
+      <li class="service-item">
+        <div class="item-icon">
+          <img
+            src="/img/service-icon-1.png"
+            width="40"
+            height="40"
+            loading="lazy"
+            alt="Truck icon"
+          />
+        </div>
+        <h3 class="h3 item-title">Miễn phí vận chuyển</h3>
+      </li>
+
+      <li class="service-item">
+        <div class="item-icon">
+          <img
+            src="/img/service-icon-2.png"
+            width="40"
+            height="40"
+            loading="lazy"
+            alt="Payment card icon"
+          />
+        </div>
+        <h3 class="h3 item-title">Thanh toán an toàn</h3>
+      </li>
+
+      <li class="service-item">
+        <div class="item-icon">
+          <img
+            src="/img/service-icon-3.png"
+            width="40"
+            height="40"
+            loading="lazy"
+            alt="Helpline icon"
+          />
+        </div>
+        <h3 class="h3 item-title">Hỗ trợ 24/7</h3>
+      </li>
+
+    </ul>
+
+  </div>
+</section>
+<!-- END SERVICE -->
+
+<!-- OFFER -->
+<section class="section offers">
+  <div class="container">
+    <ul class="offers-list has-scrollbar">
+      <li class="offers-item">
+        <a href="./shop.html" class="offers-card">
+          <figure class="card-banner">
+            <img
+              src="/img/offer-1.png"
+              width="292"
+              height="230"
+              loading="lazy"
+              alt="Fresh vegetables package"
+              class="w-100"
+            />
+          </figure>
+
+          <div class="card-content">
+            <p class="card-subtitle">Giảm giá lên đến 25%</p>
+            <h3 class="h3 card-title">Rau sạch.</h3>
+            <div class="btncreate btn-primary">Mua ngay</div>
+          </div>
+        </a>
+      </li>
+
+      <li class="offers-item">
+        <a href="./shop.html" class="offers-card">
+          <figure class="card-banner">
+            <img
+              src="/img/offer-2.png"
+              width="336"
+              height="244"
+              loading="lazy"
+              alt="Healthy & fresh beef"
+              class="w-100"
+            />
+          </figure>
+
+          <div class="card-content">
+            <p class="card-subtitle">Giảm giá lên đến 25%</p>
+            <h3 class="h3 card-title">Thịt bò tươi.</h3>
+            <div class="btncreate btn-primary">Mua ngay</div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+<!-- END OFFER -->
+
+<!-- PRODUCT -->
+<section class="section product">
+  <div class="container">
+    <p class="section-subtitle"> -- Sản Phẩm Hữu Cơ --</p>
+    <h2 class="h2 section-title">Tất Cả Sản Phẩm Hữu Cơ</h2>
+    <div class="row list active" id="list1">
+      {{#each products}}
+        <div class="col-lg-3 col-sm-3 col-6 mt-2">
+          <div
+            onclick="window.location.href='/products/{{_id}}'"
+            class="product-card"
+          >
+            <figure class="card-banner">
+              <img
+                src={{image}}
+                width="160"
+                height="160"
+                loading="lazy"
+                alt="{{name}}"
+              />
+              <div class="btn-wrapper">
+                <button class="product-btn" aria-label="Add to Whishlist">
+                  <ion-icon name="heart-outline"></ion-icon>
+                  <div class="tooltip">Thêm vào danh sách yêu thích</div>
+                </button>
+
+                <button class="product-btn" aria-label="Quick View">
+                  <ion-icon name="eye-outline"></ion-icon>
+                  <div class="tooltip">Xem nhanh</div>
+                </button>
+              </div>
+            </figure>
+
+            <div class="rating-wrapper">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+            </div>
+
+            <h3 class="h4 card-title">
+              <a href="/products/{{_id}}">{{name}}</a>
+            </h3>
+
+            <div class="price-wrapper">
+              <del class="del">{{formatCurrency price}}</del>
+              <data class="price" value="{{salePrice}}">{{formatCurrency
+                  salePrice
+                }}</data>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>
+<!-- END PRODUCT -->

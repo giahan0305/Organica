@@ -1,0 +1,51 @@
+<h5 class="mt-5 ms-3">Kết quả tìm kiếm "{{searchValue}}"</h5>
+
+<div id="search-container" class="mb-5 row">
+  {{#each products}}
+    <div class="col-lg-3 col-sm-3 col-6 mt-2">
+      <div
+        onclick="window.location.href='/products/{{_id}}'"
+        class="product-card"
+      >
+        <figure class="card-banner">
+          <img
+            src="{{image}}"
+            width="160"
+            height="160"
+            loading="lazy"
+            alt="Đọt rau lang"
+          />
+          <div class="btn-wrapper">
+            <button class="product-btn" aria-label="Add to Whishlist">
+              <ion-icon name="heart-outline"></ion-icon>
+              <div class="tooltip">Thêm vào danh sách yêu thích</div>
+            </button>
+
+            <button class="product-btn" aria-label="Quick View">
+              <ion-icon name="eye-outline"></ion-icon>
+              <div class="tooltip">Xem nhanh</div>
+            </button>
+          </div>
+        </figure>
+
+        <div class="rating-wrapper">
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+        </div>
+
+        <h3 class="h4 card-title">
+          <a href="/products/{{_id}}">{{name}}</a>
+        </h3>
+
+        <div class="price-wrapper">
+          <del class="del">{{formatCurrency price}}</del>
+          <data class="price" value="38,000">{{formatCurrency salePrice}}</data>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+
+</div>

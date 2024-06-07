@@ -1,0 +1,70 @@
+<article>
+  <!-- 
+        - #PRODUCT DETAILS
+      -->
+  <section class="section product-details">
+    <div class="container">
+
+      <div class="wrapper">
+
+        <div class="product-details-img">
+
+          <figure class="product-display">
+            <img
+              src={{product.image}}
+              width="700"
+              height="700"
+              loading="lazy"
+              alt="Non-starchy vegetables."
+              class="w-100"
+              data-product-display
+            />
+          </figure>
+
+        </div>
+
+        <div class="product-details-content">
+
+          <h3 class="product-title">{{product.name}}</h3>
+
+          <data class="product-price" value="salePrice">{{formatCurrency
+              product.salePrice
+            }}
+            đ</data>
+
+          <div class="rating-wrapper">
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+          </div>
+
+          {{#formatDauCoveInfo product.discription}}
+            <!-- The content will be rendered here -->
+          {{/formatDauCoveInfo}}
+
+          <div class="product-qty">
+            <input
+              id="quantity-input"
+              type="number"
+              name="quantity"
+              value="1"
+              min="1"
+              max="50"
+              class="product-qty-input"
+            />
+
+            <button
+              type="submit"
+              class="btn btn-lg btn-success product-qty-btn"
+            >
+              Thêm vào giỏ hàng</button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+</article>
