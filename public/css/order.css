@@ -46,3 +46,24 @@
 .btn-decrease:hover, .btn-increase:hover {
   background: #039f58;
 }
+.product-total-input {
+  display: inline-block;
+  max-width: 50px;
+  font-size: 15px;
+  color: var(--black);
+  font-weight: 100px;
+  border: none;
+  padding: 0px 10px;
+  text-align: center;
+  outline: none;
+  margin-right: 20px;
+  background-color: #ccc;
+}
+.total-order {
+  text-align: center; /* Align the total amount to the right */
+  margin-left: auto; /* Pushes the total amount to the right */
+}
+.total{
+  text-align: end;
+}
+.product-total-input:focus { border-color: none; }

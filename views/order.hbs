@@ -36,7 +36,7 @@
       <div class="col-md-6">
         <label for="inputWard" class="form-label">Quận</label>
         <select id="inputWard" class="form-select custom-select" required>
-          <option selected>Chọn</option>
+          <option value="" disabled selected>Chọn</option>
           <option>Quận 1</option>
           <option>Quận 3</option>
           <option>Quận 4</option>
@@ -52,18 +52,23 @@
       <div class="col-md-6">
         <label for="inputCity" class="form-label">Thành phố</label>
         <select id="inputCity" class="form-select custom-select" required>
-          <option selected>Chọn</option>
+          <option value="" disabled selected>Chọn</option>
           <option>Thành phố Hồ Chí Minh</option>
         </select>
       </div>
-
     </div>
     <div id="order-items" class="mb-4">
     </div>
+    <div class="row mb-3 d-flex align-items-center">
+      <h4 class="total mb-0 col-10">
+        Tổng cộng
+      </h4>
+      <span id="total-order" type="number" class="total-order col-2"></span>
+    </div>
     <button
       type="submit"
-      class="btn btn-primary w-100"
+      class="btn btn-primary btn-lg w-100"
       style="background-color: #05c26a; border-color: #05c26a;"
-    >Submit</button>
+    ><h4>Mua hàng</h4></button>
   </form>
 </div>

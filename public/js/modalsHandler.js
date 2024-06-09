@@ -131,7 +131,7 @@ function formatCurrency(amount) {
   return formattedAmount;
 }
 
-async function changeQuantity(event) {
+async function changeQuantity(event, items) {
   event.stopPropagation();
   const quantity = event.target.value;
   const idCard = event.target.getAttribute("data-id-product");
@@ -139,6 +139,7 @@ async function changeQuantity(event) {
     const response = await axios.put(`http://localhost:3000/cart/${idCard}`, {
       quantity,
     });
+    location.reload();
     if (response.status != 200) {
       throw new Error("Have problem in changing quantity ");
     }
@@ -160,6 +161,7 @@ async function deleteItem(event) {
         deletedCard.remove();
       });
       decreaseCartBadge();
+      location.reload();
     } else {
       throw new Error("Problem in deleting product");
     }

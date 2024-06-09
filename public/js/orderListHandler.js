@@ -14,6 +14,7 @@ async function MountComponent() {
     const orderContainer = document.querySelector(".order-container");
     const ordersHTML = RenderOrders(orders);
     orderContainer.innerHTML = `${orderContainer.innerHTML} ${ordersHTML}`;
+    const totalorder = document.getElementById("total-order");
   } catch (e) {
     alert(e.message);
   }

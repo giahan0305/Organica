@@ -31,6 +31,12 @@ class UserController {
   async create(req, res) {
     try {
       const { name, email, password } = req.body;
+      const user = await User.findOne({ email });
+      if (user) {
+        return res
+          .status(500)
+          .json({ message: "This email have already sign in." });
+      }
       const newUser = new User({ name, email, password });
       await newUser.save();
       res.redirect("/");

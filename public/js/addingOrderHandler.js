@@ -11,6 +11,13 @@ async function MountComponent() {
     const items = response.data.cartItems;
     const orderContainer = document.getElementById("order-items");
     orderContainer.innerHTML = rednerOrderItem(items);
+    const total = document.getElementById("total-order");
+    total.innerHTML = formatCurrency(
+      items.reduce((acc, item) => {
+        acc += item.product.salePrice * item.quantity;
+        return acc;
+      }, 0)
+    );
   } catch (e) {
     alert(e.message);
   }
